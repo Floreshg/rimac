@@ -13,7 +13,10 @@ header {
 .continue {
   position: absolute;
   bottom: 7em;
-  left: 33%; }
+  left: 30%; }
+
+.payment .continue {
+  bottom: 3em; }
 
 .iconA {
   position: absolute;
@@ -97,7 +100,7 @@ hr.style-two {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #ffc600; }
+  background-color: #cfcecf; }
 
 .p1 {
   background: #ffc600; }
@@ -112,32 +115,42 @@ hr.style-two {
   background: #981d97; }
 
 .progress__register {
-  position: relative;
-  bottom: -190px !important;
-  left: 1em; }
+  position: relative; }
+
+.validation-dni .progress__register {
+  bottom: -155px !important; }
+
+.validation-vehicle .progress__register {
+  bottom: -190px !important; }
+
+.choose-plans .progress__register {
+  bottom: -15px !important; }
+
+.payment-confirmation .progress__register {
+  bottom: -230px !important; }
+
+.mechanical-workshop .progress__register {
+  bottom: 5px !important; }
 
 .estado-3pasos {
-  width: 90%;
+  background-color: #cfcecf;
   font-size: .75em;
-  margin: 0 auto 20px; }
+  height: 0.5rem; }
+
+.estado-3pasos li {
+  top: -20px; }
 
 .estado-3pasos .paso-1 {
-  width: 20%; }
+  width: 25%; }
 
 .estado-3pasos .paso-2 {
-  width: 20%; }
+  width: 25%; }
 
 .estado-3pasos .paso-3 {
-  width: 20%; }
+  width: 25%; }
 
 .estado-3pasos .paso-4 {
-  width: 30%; }
-
-.estado-3pasos .paso-2 span {
-  left: 38%; }
-
-.estado-2pasos .paso-2 span, .estado-3pasos .paso-3 span, .estado-3pasos .paso-4 span {
-  right: 0; }
+  width: 25%; }
 
 .estado-3pasos li {
   height: 14px;
@@ -150,31 +163,34 @@ hr.style-two {
 li {
   list-style-type: none; }
 
-.estado-login .presente span {
-  border: 3px solid #fec007;
-  color: #fec007; }
-
 .estado-3pasos .paso-1 span {
   left: 0; }
 
 .estado-3pasos span {
   background-color: #fff;
-  border-radius: 50%;
-  height: 40px;
   position: absolute;
-  width: 40px;
   font-size: 1.8em;
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.estado-3pasos p {
-  background-color: #cfcecf;
-  height: 7px; }
-
 .estado-3pasos span, .estado-4pasos span {
-  border: 3px solid #cfcecf;
   color: #cfcecf;
   line-height: 15px;
   top: 0;
   text-align: center; }
+
+.choose-plans .dataUser__button {
+  margin-top: 1rem; }
+
+.show-price .row {
+  margin: 0; }
+
+.show-price .dataUser__button {
+  margin-top: 1rem; }
+
+.payment .row {
+  margin: 0; }
+
+.payment-confirmation .dataUser__button {
+  margin-top: 1rem; }

@@ -1,18 +1,18 @@
 'use strict';
 
 const Planes = (update) => {
-    const container = $('<section class="container plan"></section>');
+    const container = $('<section class="container plan choose-plans"></section>');
     const titleplan = $('<p class="dataUser__welcome">¡Crea un Plan a tu conveniencia!</p>');
     const infoplan = $('<p class="infoplan dataUser__text">Elige el plan que más te guste:</p>');
     const tablero = $('<div class="row"></div>');
     const progressBar = $(`<div class="progress__register">
-    <ul class="estado-3pasos estado-login">
-        <li class="paso-1 presente"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></span><p></p></li>
-        <li class="paso-2 "><span><img class="breadcrumb p2" src="assets/img/auto.svg" alt="auto"></span><p></p></li>
-        <li class="paso-3 "><span><img class="breadcrumb p3" src="assets/img/plan.svg" alt="check"></span><p></p></li>
-        <li class="paso-4 "><span><img class="breadcrumb gris" src="assets/img/confirmacion.svg" alt="confirmacion"></span><p></p></li>
-    </ul>
-  </div>`);
+      <ul class="estado-3pasos estado-login">
+          <li class="paso-1"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></li>
+          <li class="paso-2"><span><img class="breadcrumb p2" src="assets/img/auto.svg" alt="auto"></span></li>
+          <li class="paso-3"><span><img class="breadcrumb p3" src="assets/img/plan.svg" alt="check"></span></li>
+          <li class="paso-4"><span><img class="breadcrumb" src="assets/img/confirmacion.svg" alt="confirmacion"></li>
+      </ul>
+    </div>`);
 
     $.getJSON('https://rasveuswap01-test01.azurewebsites.net/Laboratoria/v1/plan', (json) => {
         state.plan = json;

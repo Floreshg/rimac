@@ -11,7 +11,7 @@ $color__corp: rgb(255, 198, 0), rgb(64, 193, 172), rgb(132, 189, 0), rgb(152, 29
 }
 
 header{
-    background: $color__primary; 
+    background: $color__primary;
     height: 15vh;
     width: 100%;
     text-align: center;
@@ -20,14 +20,16 @@ header{
 .continue{
     position: absolute;
     bottom: 7em;
-    left: 33%;
+    left: 30%;
 }
-
+.payment .continue{
+    bottom: 3em;
+}
 
 .iconA{
     position: absolute;
     font-size: 2em;
-    left: 9.5em;
+    left: 8.5em;
     color : nth($color__corp,3);
     margin-top: -40px;
 }

@@ -1,7 +1,7 @@
 "use strict";
 
 const DniRegister = (update) => {
-  const user_data= $('<section class="container"></section>');
+  const user_data= $('<section class="container validation-dni"></section>');
   const welcome = $('<p class="dataUser__welcome">¡Bienvenido!</p><p class="dataUser__text">En unos pocos pasos podrás encontrar y adquirir el seguro vehicular que necesitas.</p><p class="dataUser__text">Por favor, ingresa tu DNI</p>');
   const contentDni = $('<div class="input-field col s12 dataUser__input"></div>');
   const label= $('<label for="user-dni" class="active">DNI</label>');
@@ -15,13 +15,12 @@ const DniRegister = (update) => {
 
   const progressBar = $(`<div class="progress__register">
     <ul class="estado-3pasos estado-login">
-        <li class="paso-1 presente"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></span><p></p></li>
-        <li class="paso-2 "><span><img class="breadcrumb gris" src="assets/img/auto.svg" alt="auto"></span><p></p></li>
-        <li class="paso-3 "><span><img class="breadcrumb gris" src="assets/img/plan.svg" alt="check"></span><p></p></li>
-        <li class="paso-4 "><span><img class="breadcrumb gris" src="assets/img/confirmacion.svg" alt="confirmacion"></span><p></p></li>
+        <li class="paso-1"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></li>
+        <li class="paso-2"><span><img class="breadcrumb" src="assets/img/auto.svg" alt="auto"></span></li>
+        <li class="paso-3"><span><img class="breadcrumb" src="assets/img/plan.svg" alt="check"></span></li>
+        <li class="paso-4"><span><img class="breadcrumb" src="assets/img/confirmacion.svg" alt="confirmacion"></li>
     </ul>
   </div>`);
-
 
   contentDni.append(label);
   contentDni.append(user_dni);
@@ -31,8 +30,8 @@ const DniRegister = (update) => {
 
   user_data.append(welcome);
   user_data.append(contentDni);
-  user_data.append(contentButton);
   user_data.append(result);
+  user_data.append(contentButton);
 
 
 

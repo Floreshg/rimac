@@ -1,10 +1,10 @@
 const Garages = (update) =>{
-  const container = $('<section class="container"></section>');
+  const container = $('<section class="container mechanical-workshop"></section>');
   const welcome = $('<p class="dataUser__welcome">¡Encuentra tu taller más cercano!</p><p class="dataUser__text"></p>');
   const row = $('<div class="row"><h4>Lista de Talleres</h4></div>');
 
     const divFilter = $('<div class="row"></div>');
-    const department = $(`<div class="input-field col s12 m3">                            
+    const department = $(`<div class="input-field col s12 m3">
                             <select>
                               <option value="" disabled selected>Elige una opción</option>
                               <option value="1">Lima</option>
@@ -97,7 +97,14 @@ const Garages = (update) =>{
     row.append(ul);
     container.append(row);
     ul.collapsible();
-    
+    const progressBar = $(`<div class="progress__register">
+      <ul class="estado-3pasos estado-login">
+          <li class="paso-1"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></li>
+          <li class="paso-2"><span><img class="breadcrumb p2" src="assets/img/auto.svg" alt="auto"></span></li>
+          <li class="paso-3"><span><img class="breadcrumb p3" src="assets/img/plan.svg" alt="check"></span></li>
+          <li class="paso-4"><span><img class="breadcrumb p4" src="assets/img/confirmacion.svg" alt="confirmacion"></li>
+      </ul>
+    </div>`);
+    container.append(progressBar);
     return container;
 };
-

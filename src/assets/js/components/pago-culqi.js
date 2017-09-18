@@ -1,7 +1,7 @@
 'use strict';
 const PagosCulqi = (update)=>{
-    
-    const pago = $('<section id="pago" class="container"></section>');
+
+    const pago = $('<section id="pago" class="container payment"></section>');
     const row = $('<div class="row"></row>');
 
     const contentTarjeta = $('<div class="input-field col s12"></div>');
@@ -9,11 +9,11 @@ const PagosCulqi = (update)=>{
     const labelTarjeta = $('<label for="numberCard" class="active">NÚMERO DE TARJETA</label>');
 
     const contentDate = $('<div class="input-field col s12" id="date"></div>');
-    
+
     const month = $('<input type="text" id="month" maxlength="2" placeholder="MM" class="col s6">');
     const year = $('<input type="text" id="year" maxlength="4" placeholder="YYYY" class="col s6">');
     const date = $('<label for="date" class="active">FECHA</label>');
-    
+
     const contentCVV = $('<div class="input-field col s6"></div>');
     const cvv = $('<input type="text" id="cvv" placeholder="cvv" maxlength="3" >');
     const labelCvv = $('<label for="cvv" class="active">CVV</label>');
@@ -21,11 +21,11 @@ const PagosCulqi = (update)=>{
     const contentName = $('<div class="input-field col s12"></div>');
     const name = $('<input type="text" id="name" placeholder="Ingresa tu Nombre Completo">');
     const labelName = $('<label for="name" class="active">NOMBRE COMPLETO</label>');
-    
+
     const contentEmail = $('<div class="input-field col s12"></div>');
     const mail = $('<input type="email" id="mail" class="validate" placeholder="Ingresa tu Correo Electrónico">');
     const labelEmail = $('<label for="email" class="active">EMAIL</label>');
-    
+
     const contentButton = $('<div class="input-field col s12 continue"></div>');
     const pay = $('<button class="btn-large dataUser__button" disabled>PAGAR</button>');
 
@@ -57,7 +57,7 @@ const PagosCulqi = (update)=>{
         validaInputs();
         checkIt(e);
     });
-    
+
     pay.on('click', ()=>{
             $.ajax({
                 method :"POST",
@@ -77,28 +77,28 @@ const PagosCulqi = (update)=>{
 
     contentCVV.append(cvv);
     contentCVV.append(labelCvv);
-    
+
     contentName.append(name);
     contentName.append(labelName);
-    
+
     contentEmail.append(mail);
     contentEmail.append(labelEmail);
-    
+
     contentTarjeta.append(nroTarjeta);
     contentTarjeta.append(labelTarjeta);
-    
+
     contentDate.append(month);
     contentDate.append(year);
     contentDate.append(date);
-    
+
     contentButton.append(pay);
-    
+
     row.append(contentTarjeta);
     row.append(contentDate);
     row.append(contentCVV);
     row.append(contentName);
     row.append(contentEmail);
-    
+
     row.append(contentButton);
 
     pago.append(row);
