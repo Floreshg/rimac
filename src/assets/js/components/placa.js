@@ -4,33 +4,33 @@ const PlacaRegister = (update) => {
   const vehicle_data= $('<section id="vehicle-data" class="container"></section>');
   var name = state.user.nombres;
   const welcome = $('<p class="dataUser__welcome" style="text-transform: capitalize;">¡Hola '+name.toLowerCase()+' !</p><p class="dataUser__text">Para continuar con la cotización de tu seguro vehicular ingresa tu Número de Placa</p>');
-    
-  const contentplaca = $('<div class="input-field col s12 dataUser__input"></div>'); 
-  
+
+  const contentplaca = $('<div class="input-field col s12 dataUser__input"></div>');
+
   const label= $('<label for="vehicle-plate" class="active">PLACA</label>');
   const vehicle_plate = $('<input id="vehicle-plate" type="text" placeholder="Ingresa Número de Placa" maxlength="6">');
-  
+
   const contentButton = $('<div class="input-field col s12 continue"></div>');
   const search_btn= $('<button id="search" type="button" name="button" class="btn-large dataUser__button">BUSCAR</button>');
   const continue_btn= $('<button id="continue" type="button" name="button" class="btn-large dataUser__button">CONTINUAR</button>');
-  
+
   const result= $('<p id="result"></p>');
 
     const progressBar = $(`<div class="progress__register">
     <ul class="estado-3pasos estado-login">
-        <li class="paso-1 presente"><span><img class="breadcrumb p1" src="assets/img/iconos/usuario.svg" alt="user"></span><p></p></li>
-        <li class="paso-2 "><span><img class="breadcrumb p2" src="assets/img/iconos/auto.svg" alt="auto"></span><p></p></li>
-        <li class="paso-3 "><span><img class="breadcrumb gris" src="assets/img/iconos/plan.svg" alt="check"></span><p></p></li>
-        <li class="paso-4 "><span><img class="breadcrumb gris" src="assets/img/iconos/confirmacion.svg" alt="confirmacion"></span><p></p></li>
+        <li class="paso-1 presente"><span><img class="breadcrumb p1" src="assets/img/usuario.svg" alt="user"></span><p></p></li>
+        <li class="paso-2 "><span><img class="breadcrumb p2" src="assets/img/auto.svg" alt="auto"></span><p></p></li>
+        <li class="paso-3 "><span><img class="breadcrumb gris" src="assets/img/plan.svg" alt="check"></span><p></p></li>
+        <li class="paso-4 "><span><img class="breadcrumb gris" src="assets/img/confirmacion.svg" alt="confirmacion"></span><p></p></li>
     </ul>
   </div>`);
-    
+
   contentButton.append(search_btn);
   contentButton.append(continue_btn);
-    
+
   contentplaca.append(label);
-  contentplaca.append(vehicle_plate); 
-  
+  contentplaca.append(vehicle_plate);
+
   vehicle_data.append(welcome);
   vehicle_data.append(contentplaca);
   vehicle_data.append(contentButton);
