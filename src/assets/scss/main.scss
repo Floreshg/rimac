@@ -123,10 +123,15 @@ li{
 }
 .show-price .dataUser__button {
   margin-top: 1rem;
+  margin-left: 25%;
 }
 //pago
 .payment .row {
   margin: 0;
+}
+.payment .row > p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 //confirmación de pago
 .payment-confirmation .dataUser__button{

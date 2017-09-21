@@ -5,7 +5,7 @@ const DniRegister = (update) => {
   const welcome = $('<p class="dataUser__welcome">¡Bienvenido!</p><p class="dataUser__text">En unos pocos pasos podrás encontrar y adquirir el seguro vehicular que necesitas.</p><p class="dataUser__text">Por favor, ingresa tu DNI</p>');
   const contentDni = $('<div class="input-field col s12 dataUser__input"></div>');
   const label= $('<label for="user-dni" class="active">DNI</label>');
-  const user_dni = $('<input id="user-dni" type="text" placeholder="Ingresa tu DNI" maxlength="8">');
+  const user_dni = $('<input id="user-dni" type="text" placeholder="Ingresa tu DNI:" maxlength="8">');
   const loader = $('<img src="assets/img/load.svg" class="responsive-img">');
   const contentButton = $('<div class="input-field col s12 continue"></div>');
   const search_btn= $('<button id="search" type="button" class="btn-large dataUser__button">BUSCAR</button>');

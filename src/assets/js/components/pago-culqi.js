@@ -5,7 +5,7 @@ const PagosCulqi = (update)=>{
     const row = $('<div class="row"></row>');
 
     const contentTarjeta = $('<div class="input-field col s12"></div>');
-    const nroTarjeta = $('<input type="text" id="numberCard" maxlength="16" placeholder="número tarjeta">');
+    const nroTarjeta = $('<input type="text" id="numberCard" maxlength="16" placeholder="Ingresa tu Número de Tarjeta">');
     const labelTarjeta = $('<label for="numberCard" class="active">NÚMERO DE TARJETA</label>');
 
     const contentDate = $('<div class="input-field col s12" id="date"></div>');
@@ -93,6 +93,7 @@ const PagosCulqi = (update)=>{
 
     contentButton.append(pay);
 
+    row.append('<p>Para continuar, completa tus datos:</p>');
     row.append(contentTarjeta);
     row.append(contentDate);
     row.append(contentCVV);

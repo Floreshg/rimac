@@ -16,7 +16,10 @@ header {
   left: 30%; }
 
 .payment .continue {
-  bottom: 3em; }
+  bottom: 1em; }
+
+.payment .continue button {
+  margin-left: 25%; }
 
 .iconA {
   position: absolute;
@@ -187,10 +190,15 @@ li {
   margin: 0; }
 
 .show-price .dataUser__button {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-left: 25%; }
 
 .payment .row {
   margin: 0; }
+
+.payment .row > p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; }
 
 .payment-confirmation .dataUser__button {
   margin-top: 1rem; }

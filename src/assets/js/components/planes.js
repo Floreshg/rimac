@@ -26,7 +26,7 @@ const Planes = (update) => {
             const formobile = $('<form action="#"></form>');
             const range_fieldmobile = $('<p class="range-field"></p>');
             const rangemobile = $('<input id="range" type="range" value="0" min="0" max="12" step="6"/>');
-            const primamobile = $('<p>S/ 0.00</p>');
+            const primamobile = $('<p>S/. 0.00</p>');
             const buttonmobile = $('<button type="button" name="button" class="btn-large dataUser__button">Adquirir</button>');
 
             const plan = $('<div class="hide-on-small-only col m4 l4"></div>');
@@ -42,13 +42,13 @@ const Planes = (update) => {
             let valueprima = state.plan[i].prima;
 
             rangemobile.on("change", function(){
-                let operacion = parseInt(valueprima * (this.value));
+                let operacion = parseInt((valueprima * 12) / this.value);
                 primamobile.text("S/ "+operacion);
             });
 
             range.on("change", function(){
-                let operacion = parseInt(valueprima * (this.value));
-                prima.text("S/ "+operacion);
+                let operacion = parseInt((valueprima * 12) / this.value);
+                prima.text("S/. "+operacion);
             });
 
             $(document).ready(function(){
@@ -61,6 +61,7 @@ const Planes = (update) => {
             range_fieldmobile.append(rangemobile);
             collap_body.append(formobile);
             collap_body.append(primamobile);
+            collap_body.append('<p><b>COBERTURAS:</b></p>');
             li.append(collap_body);
             ul.append(li);
             contmobile.append(ul);
